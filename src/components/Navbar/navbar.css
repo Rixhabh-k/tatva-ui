@@ -45,25 +45,21 @@
 
 }
 
-.logo h1{
+.logo h1 {
 
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 
-    font-family: "gothic";
+  font-family: "gothic";
 
 }
 
 .logo h1 span {
 
-  background: linear-gradient(
+  background: linear-gradient(90deg,
 
-    90deg,
+      #00e5ff 0%,
 
-    #DA30EB 0%,
-
-    #003FF0 100%
-
-  );
+      #001eff 100%);
 
   -webkit-background-clip: text;
 
@@ -73,11 +69,11 @@
 
 }
 
-.logo-scramble{
+.logo-scramble {
 
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 
-    font-family: "gothic";
+  font-family: "gothic";
 
 }
 

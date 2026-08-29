@@ -9,6 +9,8 @@ import "velmora/style.css";
 import { applyLiquidGlass } from "../../effects/liquidGlass/liquidGlass";
 
 import "./hero.css";
+import AcidSquares from "../../effects/AcidSquares/AcidSquares";
+import Silk from "../../effects/Silk/Silk";
 
 const Hero = () => {
   const getStartedRef = useRef(null);
@@ -74,7 +76,15 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-background">
-        <GradientBlinds />
+        {/* <GradientBlinds /> */}
+        
+        <Silk
+          speed={5}
+          scale={1}
+          color="#b000c4"
+          noiseIntensity={2}
+          rotation={0}
+        />
       </div>
 
       <div className="hero-content">

@@ -16,7 +16,16 @@
 
   /* GradientBlinds needs mouse events */
   pointer-events: auto;
+  background: #000;
 }
+
+.heading-scramble {
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+}
+
 
 
 /* ================================
@@ -46,6 +55,7 @@
 .hero-content .navbar {
   pointer-events: auto;
 }
+
 
 
 /* ================================
@@ -115,7 +125,7 @@
   font-size: 4rem;
   font-weight: 700;
 
-  color: #ff00ee;
+  color: #f5f5f7;
 
   white-space: nowrap;
 }
