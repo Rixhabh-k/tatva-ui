@@ -1,0 +1,12 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: black;
+    color: white;
+}
+
+.options{
+    display: flex;
+    gap: 10px;
+}
