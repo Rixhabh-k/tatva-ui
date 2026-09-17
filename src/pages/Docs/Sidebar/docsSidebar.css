@@ -1,0 +1,201 @@
+/* =========================
+   SIDEBAR
+========================= */
+
+.docs-sidebar {
+  width: 360px;
+  min-height: 100vh;
+  flex-shrink: 0;
+  background: #08080a;
+  color: #a6a4ae;
+  border-right: 1px solid #202024;
+  overflow-y: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 28px 38px 28px 42px;
+}
+
+.docs-sidebar::-webkit-scrollbar {
+  width: 0;
+}
+
+.docs-sidebar {
+  scrollbar-width: none;
+}
+
+/* =========================
+   COMMON HEADER
+========================= */
+
+.sidebar-section-header {
+  width: 100%;
+  min-height: 45px;
+  border: none;
+  background: transparent;
+  color: #aaa8b2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-section-header:hover {
+  color: #e8e6ed;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.header-left svg {
+  flex-shrink: 0;
+  color: #d4d2da;
+}
+
+/* =========================
+   CHEVRON
+========================= */
+
+.chevron {
+  color: #777580;
+  transition: transform 0.2s ease;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* =========================
+   FOLLOW UPDATES
+========================= */
+
+.sidebar-updates {
+  margin-bottom: 38px;
+}
+
+.updates-header {
+  padding-left: 10px;
+}
+
+.updates-content {
+  margin-left: 20px;
+  padding-left: 25px;
+  margin-top: 8px;
+  border-left: 1px solid #29292f;
+}
+
+.update-link {
+  display: block;
+  color: #a6a4ae;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 10px 0;
+  transition: color 0.2s ease;
+}
+
+.update-link:hover {
+  color: #f0eef5;
+}
+
+/* =========================
+   NAVIGATION GROUPS
+========================= */
+
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.sidebar-group {
+  width: 100%;
+}
+
+.sidebar-group > .sidebar-section-header {
+  background: #242426;
+  color: #e8e6ed;
+  padding: 0 10px;
+  margin-bottom: 4px;
+}
+
+.sidebar-group > .sidebar-section-header:hover {
+  background: #2b2b2e;
+}
+
+/* =========================
+   NESTED ITEMS
+========================= */
+
+.sidebar-items {
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 1px solid #29292f;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+}
+
+.sidebar-item {
+  width: 100%;
+  min-height: 43px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #a6a4ae;
+  font-family: inherit;
+  font-size: 17px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  /* transition: background 0.2s ease, color 0.2s ease; */
+  transition: all ease 0.1s;
+}
+
+.sidebar-item:hover {
+  color: #e8e6ed;
+  background: #171719;
+}
+
+.sidebar-item.active {
+  background: #242426;
+  color: #f2f0f5;
+  font-weight: 600;
+  text-decoration: none ;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .docs-sidebar {
+    width: 280px;
+    padding: 24px 20px;
+  }
+
+  .sidebar-section-header,
+  .sidebar-item,
+  .update-link {
+    font-size: 15px;
+  }
+}
+
+
+
+
+a {
+  text-decoration: none !important;
+}
