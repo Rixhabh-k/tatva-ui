@@ -1,20 +1,24 @@
 import React from "react";
 import { useParams } from "react-router";
-import docs from "../../../data/doc";
+import docs from "../../../data/doc.js";
 import './docsPage.css'
+
 const DocsPage = () => {
 
 
   const { slug } = useParams();
-  console.log(slug);
   const doc = docs[slug];
-  console.log(doc);
-
+  const Preview=doc.preview
   return (
     <main className="docs-content">
       <h1>{doc.title}</h1>
-
       <p className="docs-description">{doc.description}</p>
+
+      {Preview && (
+        <section className="component-preview">
+          <Preview {...doc.previewProps} />
+        </section>
+      )}
 
       {doc.usage && (
         <section className="docs-section">

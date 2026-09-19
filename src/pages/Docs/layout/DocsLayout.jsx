@@ -7,7 +7,7 @@ const DocsLayout = () => {
   return (
     <main>
       <Navbar />
-      <hr />
+      <hr/>
       <section>
         <DocsSidebar />
         <Outlet />
