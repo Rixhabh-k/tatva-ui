@@ -1,11 +1,11 @@
-main{
+.docs-main{
     min-height: 100vh;
     background-color: black;
     display: flex;
     flex-direction: column;
 }
 
-section{
+.docs-layout-section{
     display: flex;
 }
 
