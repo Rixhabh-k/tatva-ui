@@ -15,13 +15,13 @@
 .docs-content {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 35px;
 
   width: 100%;
   max-width: 900px;
   min-width: 0;
 
-  padding: 64px 48px 100px;
+  padding: 10px 48px 100px;
 
   color: #e7e7e7;
   overflow-x: hidden;
@@ -61,36 +61,188 @@
    Documentation Sections
 ======================================== */
 
-.docs-section {
+/* ========================================
+   DOCS SECTION
+======================================== */
+
+.docs-section{
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  gap: 20px;
+  gap: 15px;
+}
 
+/* ========================================
+   CODE BLOCK
+======================================== */
+
+.docs-code-block {
   width: 100%;
   min-width: 0;
 
-  padding-top: 52px;
+  overflow: hidden;
+
+  background: #050505;
+
+  border: 1px solid #242424;
+  border-radius: 6px;
+
+  box-sizing: border-box;
 }
 
-.docs-section h2 {
-  margin: 0;
 
-  color: #f5f5f5;
-  font-size: clamp(20px, 2.5vw, 23px);
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.5px;
-  overflow-wrap: break-word;
+/* ========================================
+   HEADER
+======================================== */
+
+.docs-code-header {
+  height: 48px;
+
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #0b0b0b;
+
+  border-bottom: 1px solid #242424;
+
+  box-sizing: border-box;
 }
 
-.docs-section p {
-  margin: 0;
+.docs-code-title {
+  display: flex;
+  align-items: center;
 
-  color: #a1a1aa;
-  font-size: 15px;
-  line-height: 1.8;
-  overflow-wrap: break-word;
+  gap: 9px;
+
+  color: #d4d4d4;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.docs-code-dot {
+  width: 8px;
+  height: 8px;
+
+  background: #00d084;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   COPY
+======================================== */
+
+.docs-code-copy {
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 5px;
+
+  color: #777;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.docs-code-copy:hover {
+  color: #d4d4d4;
+
+  background: #171717;
+}
+
+.docs-code-copy svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* ========================================
+   CODE CONTENT
+======================================== */
+
+.docs-code-content {
+  width: 100%;
+
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #303030 transparent;
+}
+
+.docs-code-content::-webkit-scrollbar {
+  height: 6px;
+}
+
+.docs-code-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.docs-code-content::-webkit-scrollbar-thumb {
+  background: #303030;
+
+  border-radius: 10px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .docs-code-header {
+    height: 44px;
+
+    padding: 0 13px;
+  }
+
+  .docs-code-content {
+    font-size: 12px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .docs-section {
+    padding-top: 40px;
+    gap: 16px;
+  }
+
+  .docs-code-header {
+    height: 44px;
+    padding: 0 13px;
+  }
+
+  .docs-code-content pre {
+    padding: 16px;
+  }
+
+  .docs-code-content code {
+    font-size: 12px;
+    line-height: 1.65;
+  }
 }
 
 /* ========================================
@@ -330,106 +482,235 @@
    Props Table
 ======================================== */
 
+/* ========================================
+   PROPS TABLE
+======================================== */
+
 .props-table-wrapper {
   width: 100%;
   max-width: 100%;
 
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 
   border: 1px solid #29292e;
-  border-radius: 12px;
+  border-radius: 5px;
+
+  background: #050505;
+
+  -webkit-overflow-scrolling: touch;
 }
+
+
+/* ========================================
+   TABLE
+======================================== */
 
 .props-table {
   width: 100%;
-  min-width: 560px;
-  box-sizing: border-box;
 
-  border-collapse: separate;
-  border-spacing: 0;
+  min-width: 700px;
+
+  border-collapse: collapse;
 
   background: transparent;
 
   font-size: 14px;
 }
 
-/* Table Header */
+
+/* ========================================
+   HEADER
+======================================== */
 
 .props-table thead {
-  background: #18181b;
+  background: #050505;
 }
 
 .props-table th {
-  padding: 15px 18px;
+  height: 40px;
 
-  color: #a1a1aa;
-  font-size: 12px;
+  padding: 0 16px;
+
+  color: #f4f4f5;
+
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+
   text-align: left;
-  text-transform: uppercase;
+
   white-space: nowrap;
 
+  border-right: 1px solid #29292e;
   border-bottom: 1px solid #29292e;
+
+  box-sizing: border-box;
 }
 
-/* Table Cells */
-
-.props-table td {
-  padding: 18px;
-
-  color: #a1a1aa;
-  font-size: 14px;
-  line-height: 1.6;
-  text-align: left;
-  vertical-align: top;
-
-  border-bottom: 1px solid #242428;
+.props-table th:last-child {
+  border-right: none;
 }
 
-.props-table tbody tr:last-child td {
-  border-bottom: none;
-}
+
+/* ========================================
+   BODY ROWS
+======================================== */
 
 .props-table tbody tr {
+  background: #050505;
+
   transition: background 0.2s ease;
+}
+
+.props-table tbody tr:nth-child(even) {
+  background: #111111;
 }
 
 .props-table tbody tr:hover {
   background: #18181b;
 }
 
-/* Prop Name */
 
-.props-table td:first-child {
-  width: 20%;
+/* ========================================
+   CELLS
+======================================== */
 
-  color: #f4f4f5;
-  font-weight: 500;
+.props-table td {
+  padding: 15px 16px;
+
+  color: #a1a1aa;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  text-align: left;
+  vertical-align: middle;
+
+  border-right: 1px solid #29292e;
+  border-bottom: 1px solid #29292e;
 }
 
-/* Default Value */
+.props-table tbody tr:last-child td {
+  border-bottom: none;
+}
 
+.props-table td:last-child {
+  border-right: none;
+}
+
+
+/* ========================================
+   COLUMN WIDTHS
+======================================== */
+
+.props-table th:nth-child(1),
+.props-table td:nth-child(1) {
+  width: 17%;
+}
+
+.props-table th:nth-child(2),
 .props-table td:nth-child(2) {
   width: 20%;
+}
 
+.props-table th:nth-child(3),
+.props-table td:nth-child(3) {
+  width: 20%;
+}
+
+.props-table th:nth-child(4),
+.props-table td:nth-child(4) {
+  width: 43%;
+}
+
+
+/* ========================================
+   PROP NAME
+======================================== */
+
+.props-table td:first-child {
+  color: #f4f4f5;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   TYPE
+======================================== */
+
+.props-table td:nth-child(2) {
+  color: #a1a1aa;
+}
+
+
+/* ========================================
+   DEFAULT
+======================================== */
+
+.props-table td:nth-child(3) {
   color: #c4b5fd;
 }
 
-/* Code Inside Table */
+
+/* ========================================
+   CODE PILLS
+======================================== */
 
 .props-table code {
+  display: inline-block;
+
   padding: 4px 7px;
 
   border-radius: 5px;
 
   background: #1c1c21;
+
   color: #c4b5fd;
 
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-family:
+    "Fira Code",
+    "JetBrains Mono",
+    Consolas,
+    monospace;
+
   font-size: 12px;
+
+  line-height: 1.2;
+
   white-space: nowrap;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .props-table-wrapper {
+    border-radius: 5px;
+  }
+
+  .props-table {
+    min-width: 680px;
+  }
+
+  .props-table th {
+    height: 42px;
+
+    padding: 0 14px;
+
+    font-size: 12px;
+  }
+
+  .props-table td {
+    padding: 14px;
+
+    font-size: 13px;
+  }
+
+  .props-table code {
+    font-size: 11px;
+  }
 }
 
 /* ========================================

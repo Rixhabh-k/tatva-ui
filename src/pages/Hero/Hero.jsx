@@ -78,13 +78,13 @@ const Hero = () => {
       <div className="hero-background">
         {/* <GradientBlinds /> */}
         
-        <Silk
+        {/* <Silk
           speed={5}
           scale={1}
           color="#b000c4"
           noiseIntensity={2}
           rotation={0}
-        />
+        /> */}
       </div>
 
       <div className="hero-content">

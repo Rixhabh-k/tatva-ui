@@ -9,7 +9,7 @@ import {
 } from "velmora";
 
 const docs = {
-  "installation": {
+  installation: {
     title: "Velmora UI",
     description:
       "A reusable animation and interaction library for building modern, expressive web interfaces with ready-to-use React components and customizable effects.",
@@ -141,14 +141,20 @@ export default App;`,
 
     usage: {
       language: "jsx",
-      code: `<MagneticButton
-  strength={0.35}
-  radius={150}
-  ease={0.15}
-  className="magnetic-button"
->
-  Magnetic
-</MagneticButton>`,
+      code: `import MagneticButton from "velmora"
+
+export function MagneticButtonDemo() {
+  return (
+    <MagneticButton
+      strength={0.35}
+      radius={150}
+      ease={0.15}
+      className="magnetic-button"
+    >
+      Magnetic
+    </MagneticButton>
+  )
+}`,
     },
 
     props: [
@@ -199,15 +205,21 @@ export default App;`,
 
     usage: {
       language: "jsx",
-      code: `<FlipButton
-  front="FRONT"
-  back="BACK"
-  duration={500}
-  frontColor="#323237"
-  backColor="#adadaf"
-  textColor="#adadaf"
-  backTextColor="#323237"
-/>`,
+      code: `import FlipButton from "velmora"
+
+export function FlipButtonDemo() {
+  return (
+    <FlipButton
+      front="FRONT"
+      back="BACK"
+      duration={500}
+      frontColor="#323237"
+      backColor="#adadaf"
+      textColor="#adadaf"
+      backTextColor="#323237"
+    />
+  )
+}`,
     },
 
     props: [
@@ -256,8 +268,7 @@ export default App;`,
 
   "fill-button": {
     title: "Fill Button",
-    description:
-      "An expanding fill effect that fills the button on hover.",
+    description: "An expanding fill effect that fills the button on hover.",
 
     preview: FillButton,
 
@@ -272,15 +283,21 @@ export default App;`,
 
     usage: {
       language: "jsx",
-      code: `<FillButton
-  fillColor="#38146a"
-  textColor="#fff"
-  hoverTextColor="#fff"
-  duration={350}
-  className="fill-button"
->
-  Hover Me
-</FillButton>`,
+      code: `import FillButton from "velmora"
+
+export function FillButtonDemo() {
+  return (
+    <FillButton
+      fillColor="#38146a"
+      textColor="#fff"
+      hoverTextColor="#fff"
+      duration={350}
+      className="fill-button"
+    >
+      Hover Me
+    </FillButton>
+  )
+}`,
     },
 
     props: [
@@ -337,15 +354,21 @@ export default App;`,
 
     usage: {
       language: "jsx",
-      code: `<ThreeDButton
-  front="FRONT"
-  back="BACK"
-  duration={500}
-  frontColor="#323237"
-  backColor="#adadaf"
-  textColor="#adadaf"
-  backTextColor="#323237"
-/>`,
+      code: `import ThreeDButton from "velmora"
+
+export function ThreeDButtonDemo() {
+  return (
+    <ThreeDButton
+      front="FRONT"
+      back="BACK"
+      duration={500}
+      frontColor="#323237"
+      backColor="#adadaf"
+      textColor="#adadaf"
+      backTextColor="#323237"
+    />
+  )
+}`,
     },
 
     props: [
@@ -413,16 +436,22 @@ export default App;`,
 
     usage: {
       language: "jsx",
-      code: `<SubmitButton
-  idleText="SUBMIT"
-  loadingText="SENDING..."
-  successText="SUBMITTED"
-  duration={2250}
-  successDuration={1250}
-  color="#1ECD97"
-  loadingColor="#bbbbbb"
-  successColor="#471ecd"
-/>`,
+      code: `import SubmitButton from "velmora"
+
+export function SubmitButtonDemo() {
+  return (
+    <SubmitButton
+      idleText="SUBMIT"
+      loadingText="SENDING..."
+      successText="SUBMITTED"
+      duration={2250}
+      successDuration={1250}
+      color="#1ECD97"
+      loadingColor="#bbbbbb"
+      successColor="#471ecd"
+    />
+  )
+}`,
     },
 
     props: [
@@ -492,15 +521,21 @@ export default App;`,
 
     usage: {
       language: "jsx",
-      code: `<PositionAwareButton
-  fillColor="#38146a"
-  textColor="#38146a"
-  hoverTextColor="#fff"
-  duration={400}
-  className="position-button"
->
-  Position Aware
-</PositionAwareButton>`,
+      code: `import PositionAwareButton from "velmora"
+
+export function PositionAwareButtonDemo() {
+  return (
+    <PositionAwareButton
+      fillColor="#38146a"
+      textColor="#38146a"
+      hoverTextColor="#fff"
+      duration={400}
+      className="position-button"
+    >
+      Position Aware
+    </PositionAwareButton>
+  )
+}`,
     },
 
     props: [
@@ -558,17 +593,23 @@ export default App;`,
 
     usage: {
       language: "jsx",
-      code: `<UploadButton
-  filename="Document.pdf"
-  buttonText="Upload"
-  uploadingText="Uploading..."
-  completedText="Completed"
-  uploadDuration={3000}
-  completeDuration={2000}
-  buttonColor="#3bafda"
-  progressColor="#2d334c"
-  className="my-upload"
-/>`,
+      code: `import UploadButton from "velmora"
+
+export function UploadButtonDemo() {
+  return (
+    <UploadButton
+      filename="Document.pdf"
+      buttonText="Upload"
+      uploadingText="Uploading..."
+      completedText="Completed"
+      uploadDuration={3000}
+      completeDuration={2000}
+      buttonColor="#3bafda"
+      progressColor="#2d334c"
+      className="my-upload"
+    />
+  )
+}`,
     },
 
     props: [

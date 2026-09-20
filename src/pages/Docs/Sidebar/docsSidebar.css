@@ -3,15 +3,15 @@
 ========================= */
 
 .docs-sidebar {
-  width: 360px;
+  width: 300px;
   min-height: 100vh;
   flex-shrink: 0;
-  background: #08080a;
+  background: #050505;
   color: #a6a4ae;
   border-right: 1px solid #202024;
   overflow-y: auto;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 28px 38px 28px 42px;
+  padding: 10px 10px;
 }
 
 .docs-sidebar::-webkit-scrollbar {
@@ -38,7 +38,7 @@
   padding: 0 10px;
   border-radius: 7px;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
   transition: background 0.2s ease, color 0.2s ease;
@@ -111,7 +111,7 @@
 .sidebar-navigation {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 15px;
 }
 
 .sidebar-group {
@@ -119,14 +119,14 @@
 }
 
 .sidebar-group > .sidebar-section-header {
-  background: #242426;
+  background: #161616;
   color: #e8e6ed;
   padding: 0 10px;
   margin-bottom: 4px;
 }
 
 .sidebar-group > .sidebar-section-header:hover {
-  background: #2b2b2e;
+  background: #161616;
 }
 
 /* =========================
@@ -154,7 +154,7 @@
   background: transparent;
   color: #a6a4ae;
   font-family: inherit;
-  font-size: 17px;
+  font-size: 0.9rem;
   text-align: left;
   text-decoration: none;
   cursor: pointer;
