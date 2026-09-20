@@ -1,165 +1,350 @@
-/* =========================
-   NAVBAR
-========================= */
+/* ========================================
+   DOCS NAVBAR
+======================================== */
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+.docs-navbar {
   width: 100%;
-  min-height: 72px;
-  padding: 16px 30px;
-  box-sizing: border-box;
+  height: 72px;
 
-  background: #000;
-  color: #fff;
+  background: #050505;
+  border-bottom: 1px solid #1c1c1c;
 
-  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+
+  position: relative;
+  z-index: 100;
+
+  font-family: "gothic";
 }
 
-/* =========================
-   LOGO
-========================= */
+.docs-navbar-container {
+  width: 100%;
+  height: 100%;
 
-.logo {
-  color: #f5f5f5;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.6px;
-  white-space: nowrap;
-}
+  padding: 0 32px;
 
-/* =========================
-   OPTIONS
-========================= */
-
-.options {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 28px;
 }
 
-/* =========================
+
+/* ========================================
+   LOGO
+======================================== */
+
+.docs-navbar-logo {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+.docs-navbar-logo-image {
+  height: 32px;
+  width: auto;
+
+  display: block;
+}
+.docs-logo-text{
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* ========================================
    SEARCH
-========================= */
+======================================== */
 
-.options input {
-  width: 230px;
+.docs-navbar-search {
   height: 38px;
+  width: min(260px, 28vw);
 
-  padding: 0 13px;
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 9px;
+
+  background: #0a0a0a;
+  border: 1px solid #242424;
+  border-radius: 6px;
+
+  color: #8b8b8b;
+
   box-sizing: border-box;
+}
 
-  border: 1px solid #29292f;
-  border-radius: 8px;
+.docs-navbar-search-icon {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+}
+
+.docs-navbar-search input {
+  width: 100%;
+  min-width: 0;
+
+  margin-left: 9px;
+
+  background: transparent;
+  border: none;
   outline: none;
 
-  background: #111113;
-  color: #f5f5f5;
+  color: #ffffff;
 
+  font-size: 13px;
   font-family: inherit;
+}
+
+.docs-navbar-search input::placeholder {
+  color: #858585;
+}
+
+.docs-navbar-search-shortcut {
+  height: 25px;
+
+  padding: 0 6px;
+
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  border: 1px solid #292929;
+  border-radius: 5px;
+
+  color: #888888;
+
+  font-size: 11px;
+
+  flex-shrink: 0;
+}
+
+.docs-navbar-search-shortcut span:first-child {
+  font-size: 13px;
+}
+
+
+/* ========================================
+   NAVIGATION LINKS
+======================================== */
+
+.docs-navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  flex-shrink: 0;
+}
+
+.docs-navbar-link {
+  color: #b8b8b8;
+
+  text-decoration: none;
+
   font-size: 14px;
+  font-weight: 600;
 
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease;
+  transition: color 0.2s ease;
 }
 
-.options input::placeholder {
-  color: #777580;
+.docs-navbar-link:hover {
+  color: #ffffff;
 }
 
-.options input:focus {
-  border-color: #555560;
-  background: #161619;
+
+/* ========================================
+   GITHUB
+======================================== */
+
+.docs-navbar-github {
+  height: 34px;
+
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #a0a0a0;
+
+  text-decoration: none;
+
+  border: 1px solid #202020;
+  border-radius: 18px;
+
+  font-size: 12px;
+
+  flex-shrink: 0;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+.docs-navbar-github-icon {
+  width: 16px;
+  height: 16px;
+}
 
-.options button {
-  display: inline-flex;
+.docs-navbar-star {
+  color: #8a8a8a;
+
+  font-size: 12px;
+}
+
+.docs-navbar-star-count {
+  color: #8a8a8a;
+}
+
+
+/* ========================================
+   THEME BUTTON
+======================================== */
+
+.docs-navbar-theme {
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  display: flex;
   align-items: center;
   justify-content: center;
-    
-  height: 38px;
-  padding: 0 14px;
 
-  border: 1px solid #29292f;
-  border-radius: 8px;
+  background: transparent;
+  border: none;
 
-  background: #111113;
-  color: #c7c5ce;
-
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 500;
+  color: #c8c8c8;
 
   cursor: pointer;
 
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
+  flex-shrink: 0;
 }
 
-a{
-    color:white;
-    display: flex;
+.docs-navbar-theme svg {
+  width: 18px;
+  height: 18px;
 }
 
-.options button:hover {
-  background: #242426;
-  border-color: #45454d;
-  color: #fff;
+
+/* ========================================
+   MOBILE MENU
+======================================== */
+
+.docs-navbar-menu {
+  display: none;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 6px;
+
+  background: transparent;
+  border: none;
+
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 4px;
+
+  cursor: pointer;
 }
 
-.options button:active {
-  transform: translateY(1px);
+.docs-navbar-menu span {
+  display: block;
+
+  width: 16px;
+  height: 1.5px;
+
+  background: #cfcfcf;
 }
 
-/* GitHub icon button */
 
-.options .icon-button {
-  width: 38px;
-  padding: 0;
-}
+/* ========================================
+   TABLET
+   701px - 900px
+======================================== */
 
-.options .icon-button svg {
-  width: 19px;
-  height: 19px;
-}
+@media (max-width: 900px) {
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-  .navbar {
-    padding: 16px 18px;
+  .docs-navbar-container {
+    padding: 0 24px;
+    gap: 20px;
   }
 
-  .logo {
-    font-size: 20px;
+  .docs-navbar-search {
+    width: 220px;
   }
 
-  .options {
-    gap: 7px;
+  .docs-navbar-links {
+    gap: 18px;
   }
 
-  .options input {
+  .docs-navbar-github {
     display: none;
   }
 
-  .options button {
-    height: 35px;
-    padding: 0 10px;
-    font-size: 13px;
+  /* Logo keeps aspect ratio */
+  .docs-navbar-logo-image {
+    height: 30px;
+    width: auto;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+   700px and below
+======================================== */
+
+@media (max-width: 700px) {
+
+  .docs-navbar {
+    height: 58px;
   }
 
-  .options .icon-button {
-    width: 35px;
+  .docs-navbar-container {
+    padding: 0 16px;
+    gap: 0;
+  }
+
+  /* Only height changes.
+     Width is automatically calculated. */
+  .docs-navbar-logo-image {
+    height: 34px;
+    width: auto;
+  }
+
+  .docs-navbar-search,
+  .docs-navbar-links {
+    display: none;
+  }
+
+  .docs-navbar-theme {
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
+  .docs-navbar-menu {
+    display: flex;
+  }
+}
+
+
+/* ========================================
+   SMALL PHONES
+   380px and below
+======================================== */
+
+@media (max-width: 380px) {
+
+  .docs-navbar-container {
+    padding: 0 14px;
+  }
+
+  .docs-navbar-logo-image {
+    height: 30px;
+    width: auto;
   }
 }

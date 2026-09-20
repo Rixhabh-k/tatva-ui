@@ -5,14 +5,14 @@ import "./docslayout.css";
 import DocsSidebar from "../Sidebar/DocsSidebar";
 const DocsLayout = () => {
   return (
-    <main>
+    <div className="docs-main">
       <Navbar />
       <hr/>
-      <section>
+      <section className="docs-layout-section" >
         <DocsSidebar />
         <Outlet />
       </section>
-    </main>
+    </div>
   );
 };
 
