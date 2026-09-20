@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Download, MousePointer2, ChevronUp } from "lucide-react";
 
 
-import "./DocsSidebar.css";
+import "./docsSidebar.css";
 import { useNavigate } from "react-router";
 
 const navigation = [
@@ -10,6 +10,10 @@ const navigation = [
     title: "Installation",
     icon: Download,
     items: [
+      {
+        label: "Installation",
+        slug: "installation",
+      },
       {
         label: "Installation",
         slug: "installation",
