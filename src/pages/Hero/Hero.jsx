@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { FaGithub } from "react-icons/fa";
-
+import { Link } from "react-router";
 import GradientBlinds from "../../effects/GradientBlinds/GradientBlinds";
 import Navbar from "../../components/Navbar/Navbar";
 import { TextScramble } from "velmora";
@@ -118,15 +118,15 @@ const Hero = () => {
           </div>
 
           <div className="hero-buttons">
-            <a
+            <Link
               ref={getStartedRef}
-              href="/docs"
+              to={"/docs/installation"}
               className="hero-btn"
               data-radius="14"
             >
               <span>Get Started</span>
               <span className="arrow">→</span>
-            </a>
+            </Link>
 
             <a
               ref={githubRef}
