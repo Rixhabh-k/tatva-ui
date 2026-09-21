@@ -4,14 +4,27 @@
 
 .docs-sidebar {
   width: 300px;
-  min-height: 100vh;
+  height: 100%;
+  min-height: 0;
+
   flex-shrink: 0;
+
   background: #050505;
   color: #a6a4ae;
+
   border-right: 1px solid #202024;
+
   overflow-y: auto;
+
   font-family: Arial, Helvetica, sans-serif;
+
   padding: 10px 10px;
+}
+
+.sidebar-item.active {
+  background: #18181a;
+  /* border: 1px solid #2a2a2d; */
+  color: #ffffff;
 }
 
 .docs-sidebar::-webkit-scrollbar {
