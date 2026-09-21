@@ -3,6 +3,8 @@ import docs from "../../../data/doc";
 import { useNavigate } from "react-router-dom";
 import "./navbar.css";
 import { Link } from "react-router";
+import Logo from "../../../../public/images/logo (1).png";
+
 const DocsNavbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -41,14 +43,10 @@ const DocsNavbar = () => {
       <header className="docs-navbar">
         <div className="docs-navbar-container">
           {/* Logo */}
-          <a href="/" className="docs-navbar-logo">
-            <img
-              src="../../../../public/images/logo (1).png"
-              alt="Tatva UI"
-              className="docs-navbar-logo-image"
-            />
+          <Link to="/" className="docs-navbar-logo">
+            <img src={Logo} alt="Tatva UI" className="docs-navbar-logo-image" />
             <h1 className="docs-logo-text">Tatva UI</h1>
-          </a>
+          </Link>
 
           {/* Desktop Search */}
           <div
