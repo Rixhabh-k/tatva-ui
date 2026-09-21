@@ -8,7 +8,17 @@ import Installation from "../installation Tab/Installation.jsx";
 const DocsPage = () => {
   const { slug } = useParams();
   const doc = docs[slug];
+
+  if (!doc) {
+    return (
+      <main className="docs-content">
+        <h1>Page not found</h1>
+      </main>
+    );
+  }
+
   const Preview = doc.preview;
+
   return (
     <main className="docs-content">
       <div className="docs-heading-content">
@@ -28,7 +38,25 @@ const DocsPage = () => {
         <section className="docs-section">
           <h2>Usage</h2>
 
-          <DocsCodeBlock code={doc.usage.code} language="jsx" />
+          <DocsCodeBlock
+            code={doc.usage.code}
+            language={doc.usage.language || "jsx"}
+          />
+        </section>
+      )}
+
+      {doc.css && (
+        <section className="docs-section">
+          <h2>{doc.css.title || "CSS Styling"}</h2>
+
+          {doc.css.description && (
+            <p className="docs-description">{doc.css.description}</p>
+          )}
+
+          <DocsCodeBlock
+            code={doc.css.code}
+            language={doc.css.language || "css"}
+          />
         </section>
       )}
 
