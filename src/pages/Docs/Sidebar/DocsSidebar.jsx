@@ -14,10 +14,6 @@ const navigation = [
         label: "Installation",
         slug: "installation",
       },
-      {
-        label: "Installation",
-        slug: "installation",
-      },
     ],
   },
   {
