@@ -17,13 +17,18 @@
   flex-direction: column;
   gap: 35px;
 
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+
   width: 100%;
   max-width: 900px;
-  min-width: 0;
 
   padding: 10px 48px 100px;
 
   color: #e7e7e7;
+
+  overflow-y: auto;
   overflow-x: hidden;
 
   font-family: "Space Grotesk", sans-serif;
@@ -243,6 +248,14 @@
     font-size: 12px;
     line-height: 1.65;
   }
+}
+
+.docs-content::-webkit-scrollbar {
+  width: 0;
+}
+
+.docs-content {
+  scrollbar-width: none;
 }
 
 /* ========================================

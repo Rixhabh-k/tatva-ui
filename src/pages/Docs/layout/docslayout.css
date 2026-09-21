@@ -1,15 +1,24 @@
-.docs-main{
-    min-height: 100vh;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
+.docs-main {
+  height: 100vh;
+  overflow: hidden;
+
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.docs-layout-section{
-    display: flex;
+.docs-layout-section {
+  flex: 1;
+  min-height: 0;
+
+  display: flex;
+  overflow: hidden;
 }
 
 hr {
+  flex-shrink: 0;
+
   border: none;
   border-top: 1px solid #202024;
 }

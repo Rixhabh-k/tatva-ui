@@ -186,6 +186,8 @@ export function MagneticButtonDemo() {
     ],
   },
 
+  
+
   "flip-button": {
     title: "Flip Button",
     description: "A 3D-style text flip effect.",

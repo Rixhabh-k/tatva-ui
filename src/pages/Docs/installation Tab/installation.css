@@ -1,0 +1,173 @@
+.docs-installation {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.docs-installation h2 {
+  margin-bottom: 16px;
+}
+
+.installation-block {
+  width: 100%;
+
+  border: 1px solid #252525;
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  background: #0a0a0a;
+}
+
+
+/* ========================================
+   HEADER / TABS
+======================================== */
+
+.installation-tabs {
+  height: 56px;
+
+  display: flex;
+  align-items: stretch;
+
+  position: relative;
+
+  background: #151515;
+
+  border-bottom: 1px solid #292929;
+}
+
+.installation-tab {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 16px;
+
+  color: #777;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.installation-tab.active {
+  color: #e5e5e5;
+}
+
+.installation-tab.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+
+  height: 2px;
+
+  background: #ffffff;
+}
+
+
+/* ========================================
+   NPM ICON
+======================================== */
+
+.npm-icon {
+  color: #e44;
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   COPY BUTTON
+======================================== */
+
+.installation-copy {
+  position: absolute;
+
+  right: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background: transparent;
+
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  color: #777;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.installation-copy:hover {
+  color: #ddd;
+
+  background: #202020;
+
+  border-color: #303030;
+}
+
+.installation-copy svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* ========================================
+   CODE
+======================================== */
+
+.installation-code {
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 16px;
+
+  background: #080808;
+
+  overflow-x: auto;
+}
+
+.installation-code code {
+  font-family: "Fira Code", "Cascadia Code", Consolas, monospace;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+
+/* Syntax-like colors */
+
+.command-npm {
+  color: #f0f0f0;
+}
+
+.command-install {
+  color: #c792ea;
+}
+
+.command-package {
+  color: #82aaff;
+}
