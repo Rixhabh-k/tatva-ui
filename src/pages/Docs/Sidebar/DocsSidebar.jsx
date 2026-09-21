@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Download, MousePointer2, ChevronUp } from "lucide-react";
+import { Download, MousePointer2, ChevronUp,Type } from "lucide-react";
 
 import "./docsSidebar.css";
 import { useNavigate, useLocation } from "react-router";
@@ -15,6 +15,7 @@ const navigation = [
       },
     ],
   },
+
   {
     title: "Buttons",
     icon: MousePointer2,
@@ -46,6 +47,33 @@ const navigation = [
       {
         label: "Upload Button",
         slug: "upload-button",
+      },
+    ],
+  },
+
+  {
+    title: "Text",
+    icon: Type,
+    items: [
+      {
+        label: "TypeWriter Text",
+        slug: "typewriter-text",
+      },
+      {
+        label: "Text Scramble",
+        slug: "text-scramble",
+      },
+      {
+        label: "Shadow Text",
+        slug: "shadow-text",
+      },
+      {
+        label: "Wave Text",
+        slug: "wave-text",
+      },
+      {
+        label: "Magic Text",
+        slug: "magic-text",
       },
     ],
   },
