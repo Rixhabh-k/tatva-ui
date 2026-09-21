@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import docs from "../../../data/doc";
 import { useNavigate } from "react-router-dom";
 import "./navbar.css";
-
+import { Link } from "react-router";
 const DocsNavbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -80,9 +80,9 @@ const DocsNavbar = () => {
               Templates
             </a>
 
-            <a href="/docs" className="docs-navbar-link">
+            <Link href="/docs" className="docs-navbar-link">
               Docs
-            </a>
+            </Link>
           </nav>
 
           {/* Theme */}
