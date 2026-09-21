@@ -28,6 +28,12 @@
   gap: 28px;
 }
 
+.docs-search-no-results {
+  padding: 30px 10px;
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+}
 
 /* ========================================
    LOGO
@@ -346,5 +352,264 @@
   .docs-navbar-logo-image {
     height: 30px;
     width: auto;
+  }
+}
+
+
+/* ========================================
+   SEARCH MODAL OVERLAY
+======================================== */
+
+.docs-search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  font-family: "gothic";
+
+  background: rgba(0, 0, 0, 0.72);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 72px;
+
+  animation: docsSearchFadeIn 0.15s ease;
+}
+
+
+/* ========================================
+   SEARCH MODAL
+======================================== */
+
+.docs-search-modal {
+  width: min(512px, calc(100vw - 32px));
+  max-height: calc(100vh - 100px);
+
+  background: #090909;
+
+  border: 1px solid #292929;
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.02);
+
+  animation: docsSearchSlideIn 0.15s ease;
+}
+
+
+/* ========================================
+   MODAL INPUT
+======================================== */
+
+.docs-search-modal-input {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 14px;
+
+  border-bottom: 1px solid #242424;
+
+  color: #888;
+}
+
+.docs-search-modal-input svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.docs-search-modal-input input {
+  width: 100%;
+
+  margin-left: 10px;
+
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.docs-search-modal-input input::placeholder {
+  color: #858585;
+}
+
+
+/* ========================================
+   SEARCH CONTENT
+======================================== */
+
+.docs-search-content {
+  padding: 9px 8px 12px;
+
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+
+/* Section title */
+
+.docs-search-section-title {
+  padding: 4px 8px 7px;
+
+  color: #858585;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   SEARCH ITEM
+======================================== */
+
+.docs-search-item {
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 7px 8px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.docs-search-item:hover {
+  background: #202020;
+}
+
+
+/* Icon */
+
+.docs-search-item-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #303030;
+  border-radius: 6px;
+
+  color: #aaa;
+
+  font-size: 15px;
+}
+
+
+/* Text */
+
+.docs-search-item-info {
+  min-width: 0;
+  flex: 1;
+
+  margin-left: 11px;
+}
+
+.docs-search-item-title {
+  color: #eeeeee;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 18px;
+}
+
+.docs-search-item-description {
+  margin-top: 1px;
+
+  color: #858585;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Right side */
+
+.docs-search-item-type {
+  margin-left: 12px;
+
+  color: #858585;
+
+  font-size: 11px;
+
+  flex-shrink: 0;
+}
+
+
+/* Divider */
+
+.docs-search-divider {
+  height: 1px;
+
+  margin: 8px 0;
+
+  background: #292929;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+.docs-search-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.docs-search-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.docs-search-content::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes docsSearchFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes docsSearchSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
