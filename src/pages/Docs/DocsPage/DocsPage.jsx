@@ -35,7 +35,7 @@ const DocsPage = () => {
       <Installation />
 
       {doc.usage && (
-        <section className="docs-section">
+        <section>
           <h2>Usage</h2>
 
           <DocsCodeBlock
